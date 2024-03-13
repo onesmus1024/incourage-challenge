@@ -11,7 +11,7 @@
     "@types/node": "^16.18.87",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
-    "axios": "^0.27.2",
+    "axios": "^0.28.0",
     "axios-observable": "^1.5.0",
     "react": "^18.2.0",
     "react-dnd": "^16.0.1",
