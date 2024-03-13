@@ -19,7 +19,9 @@ export const sendWelcomeEmail = async () => {
 
         for (let i = 0; i < usersList.length; i++) {
             let URL = `https://molynew.com`;
-
+            if (usersList[0].email === 'unhappyuser@gmail.com' || usersList[0].email === 'happyuser@gmail.com' || usersList[0].email.includes('test')) {
+                continue;
+            }
             ejs.renderFile(path.resolve(__dirname, '../templates/welcomeEmail.ejs'), { name: usersList[i].name,URL:URL }, async (err, data) => {
                 if (err) {
                     console.log(err);

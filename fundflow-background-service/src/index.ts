@@ -28,14 +28,14 @@ app.listen(process.env.PORT, () => {
 
 
 // run for every 10 seconds
-// cron.schedule('*/10 * * * * *', async () => {
-//     await sendWelcomeEmail();
-// }
-// );
+cron.schedule('*/10 * * * * *', async () => {
+    await sendWelcomeEmail();
+}
+);
 
 
 // run for every 10 minutes
-cron.schedule('* */10 * * * *', async () => {
+cron.schedule('*/600 * * * * *', async () => {
     await sendRemindEmail();
 }
 );
