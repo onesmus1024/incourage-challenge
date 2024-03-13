@@ -4,3 +4,6 @@
 2024-03-13T11:16:25.389Z : INFO : User: admin - Server is running on port 8080
 2024-03-13T13:28:00.186Z : INFO : User: admin - Server is running on port 8080
 2024-03-13T13:28:14.615Z : INFO : User: admin - Server is running on port 8080
+2024-03-13T18:30:43.414Z : INFO : Fetched all users
+2024-03-13T19:14:37.162Z : ERROR : Internal server error
+2024-03-13T19:16:38.537Z : ERROR : Internal server error

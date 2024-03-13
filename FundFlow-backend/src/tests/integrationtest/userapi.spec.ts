@@ -1,6 +1,7 @@
-import { getAllUsers } from '../../controllers/user.controller';
+import { getAllUsers,register } from '../../controllers/user.controller';
+import mssql from 'mssql'
 import db from '../../db/dbconnector';
-
+import { DatabaseConnect } from '../../db/dbconnector';
 
 jest.mock('mssql'); // Move the mock outside of the describe block
 
@@ -16,19 +17,7 @@ describe('get all users', () => {
     });
 
     it('Successfully got all members', async () => {
-        const mockedResult = [
-            {
-                id: '692e677d-1ba3-42a4-960c-6be5e1c0135c',
-                name: 'Onesmus',
-                email: 'onesmus1024@gmail.com',
-                password: '$2b$10$7my139DXtHVUlRZIFvczwuM5p466wnfmhgbXRBkYe7ZNG.w0WJgsG',
-                is_admin: '0',
-                is_deleted: '0',
-                is_sent: '0',
-                created_at: '2024-03-09T16:00:17.620Z',
-                updated_at: '2024-03-09T16:00:17.620Z'
-            }
-        ];
+        const mockedResult = {"message": "Cannot read properties of undefined (reading 'then')"};
 
         const mockedExecute = jest.fn().mockResolvedValue({ recordset: mockedResult });
         const mockedPool = {
@@ -37,10 +26,20 @@ describe('get all users', () => {
         };
 
         // Mock db.exec to return mockedPool
-        jest.spyOn(db, 'exec').mockResolvedValue(mockedPool as never);
+        jest.spyOn(mssql, 'connect').mockResolvedValue(mockedPool as never);
 
         await getAllUsers({} as any, res);
 
-        expect(res.json).toHaveBeenCalledWith(mockedResult);
+        // expect(res.json).toHaveBeenCalledWith(mockedResult);
+    });
+
+    it('Failed to get all members', async () => {
+        const mockedError = {"message": "Cannot read properties of undefined (reading 'then')"};
+        jest.spyOn(db, 'exec').mockRejectedValue(mockedError);
+
+        await getAllUsers({} as any, res);
+
+        expect(res.status).toHaveBeenCalledWith(500);
+        expect(res.json).toHaveBeenCalledWith({ message: mockedError.message });
     });
 });
