@@ -1,0 +1,7 @@
+
+CREATE OR ALTER PROCEDURE deleteLoan
+@id VARCHAR ( 255 )
+AS
+BEGIN
+    DELETE FROM loans WHERE id = @id
+END

@@ -1,0 +1,7 @@
+
+
+CREATE OR ALTER PROCEDURE getAllLoans 
+AS
+BEGIN
+    SELECT * FROM loans
+END

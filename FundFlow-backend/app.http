@@ -1,0 +1,130 @@
+### get all users
+GET http://localhost:8080/api/v1/user
+Authorization: Bearer beyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+
+### get user by id
+GET http://localhost:8080/api/v1/user/b0028333-6371-4ea9-abb7-239ab4308234
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+### create user
+POST http://localhost:8080/api/v1/user/register
+Content-Type: application/json
+
+{
+  "name": "happyuser",
+  "email": "happyuser@gmail.com",
+  "password": "123456"
+}
+
+
+### update user
+PUT http://localhost:8080/api/v1/user/b0028333-6371-4ea9-abb7-239ab4308234
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+{
+       "name": "Onesmus",
+      "email": "onesmus1024@gmail.com",
+      "password": "123456",
+       "is_admin": "1"
+
+    }
+
+### delete user
+
+DELETE http://localhost:8080/api/v1/user/20148ddd-1362-466b-9a8e-607497c76b48
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+
+### login user
+
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+
+{
+  "email": "happyuserd@gmail.com",
+  "password": "123456"
+
+}
+
+### Loan Endpoints
+
+### get all loans
+
+GET http://localhost:8080/api/v1/loan
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+### get loan by user id
+
+GET http://localhost:8080/api/v1/loan/621fe260-e108-4742-81e6-c151f9d13f5b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+### create loan
+POST http://localhost:8080/api/v1/loan
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+{
+  "user_id": "b0028333-6371-4ea9-abb7-239ab4308234",
+  "amount": "1000",
+  "interest_rate": "0.1",
+  "due_at": "2021-01-01"
+}
+
+### update loan
+
+PUT http://localhost:8080/api/v1/loan/20148ddd-1362-466b-9a8e-607497c76b48
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+{
+  "user_id": "b0028333-6371-4ea9-abb7-239ab4308234",
+  "amount": "1000",
+  "interest_rate": "0.1",
+  "due_at": "2021-01-01"
+}
+
+### delete loan
+
+DELETE http://localhost:8080/api/v1/loan/20148ddd-1362-466b-9a8e-607497c76b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+
+
+
+## credit score endpoints
+
+### get all credit scores
+
+GET http://localhost:8080/api/v1/creditscore
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+### get credit score by user id
+
+GET http://localhost:8080/api/v1/creditscore/b0028333-6371-4ea9-abb7-239ab4308234
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+### create credit score
+
+POST http://localhost:8080/api/v1/creditscore
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+{
+  "user_id": "b0028333-6371-4ea9-abb7-239ab4308234",
+  "loan_history": "poor",
+  "collateral": "yes",
+  "income": "1000",
+  "employment_history": "poor",
+  "dept_to_income_ration": "poor"
+}
+
+### update credit score
+
+PUT http://localhost:8080/api/v1/creditscore/76f45d9d-b731-48cd-9e17-0846135f3944
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0
+{
+  "user_id": "b0028333-6371-4ea9-abb7-239ab4308234",
+  "loan_history": "poor",
+  "collateral": "yes",
+  "income": "1000",
+  "employment_history": "poor",
+  "dept_to_income_ration": "poor"
+}
+
+
+### delete credit score
+
+DELETE http://localhost:8080/api/v1/creditscore/76f45d9d-b731-48cd-9e17-0846135f3944
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjljNTI2OThmLTNjZjQtNGI5Yi04NDZkLThkYjRjNTJjYjFmMCIsImVtYWlsIjoiaGFwcHl1c2VyQGdtYWlsLmNvbSIsIm5hbWUiOiJoYXBweXVzZXIiLCJpYXQiOjE3MTAyNzY1NTEsImV4cCI6MTcxMDI4MDE1MX0.lnEKrUOZCtqX7PVSZNmTG-bC1r0pKuFkNF0WLO_eQj0

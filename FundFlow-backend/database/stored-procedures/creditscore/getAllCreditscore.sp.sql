@@ -1,0 +1,6 @@
+
+CREATE OR ALTER PROCEDURE getAllCreditScore
+AS 
+BEGIN
+    SELECT * FROM creditscore
+END

@@ -1,0 +1,15 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/fundflow-frontend/node_modules
+/FundFlow-backend/node_modules
+/FundFlow-cypress-test/node_modules
+/funflow-api-test/node_modules
+/fundflow-background-service/node_modules
+/FundFlow-backend/.env
+/fundflow-background-service/.env
+/fundflow-frontend/.env
+/FundFlow-backend/.env
+/FundFlow-cypress-test/.env
+/funflow-api-test/.env
+/fundflow-background-service/.env

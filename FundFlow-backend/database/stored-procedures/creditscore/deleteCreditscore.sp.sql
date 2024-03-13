@@ -1,0 +1,7 @@
+
+CREATE OR ALTER PROCEDURE deleteCreditScore
+AS
+BEGIN
+    DELETE FROM creditscore
+END
+
