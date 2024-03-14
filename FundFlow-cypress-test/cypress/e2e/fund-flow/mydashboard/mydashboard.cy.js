@@ -7,7 +7,9 @@ describe('Fundflow Dashbord', () => {
 
     it ('can see the dashboard', () => {
         cy.login(happyuser.email, happyuser.password)
+        cy.wait(1000)
         cy.contains("Loans Dashboard")
+        cy.wait(1000)
         
 
     }

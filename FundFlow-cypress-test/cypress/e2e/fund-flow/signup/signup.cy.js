@@ -11,9 +11,10 @@ describe('example to-do app', () => {
         cy.contains("Sign up")
         cy.get('[data-testId=name]').type("test").should('have.value', 'test')
         cy.get('[data-testId=email]').type("test@gmail.com").should('have.value', 'test@gmail.com')
+        cy.wait(1000)
         cy.get('[data-testId=password]').type("123456").should('have.value', '123456')
         cy.get('[data-testId=signup-button]').click()
-        cy.wait(2000)
+        cy.wait(1000)
     
       })
 
@@ -23,6 +24,7 @@ describe('example to-do app', () => {
         cy.get('[data-testId=email]').type("test@gmail.com").should('have.value', 'test@gmail.com')
         cy.get('[data-testId=password]').type("123456").should('have.value', '123456')
         cy.get('[data-testId=signup-button]').click()
+        cy.wait(1000)
         cy.contains("User already exists")
         cy.wait(1000)
 
